@@ -63,9 +63,9 @@
   // Null variable that will hold cell tower data
   var airports = null;
 
-  // 4. build up a set of colors from colorbrewer's Paired category
-  var colors = chroma.scale('Paired').mode('lch').colors(4);
-
+  // // 4. build up a set of colors from colorbrewer's Paired category
+  // var colors = chroma.scale('Paired').mode('lch').colors(4);
+var colors = ["#8dd3c7", "#fffb3", "bebada", "fb8072"];
   // 5. dynamically append style classes to this page. This style classes will be used for colorize the markers.
   for (i = 0; i < 4; i++) {
       $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
