@@ -74,7 +74,7 @@
   // Get GeoJSON and put on it on the map when it loads
   airports= L.geoJson.ajax("assets/airports.geojson", {
     onEachFeature: function (feature, layer){
-      layer.bindPopup("Located at" + feature.properties.CITY + ", " feature.properties.STATE);
+      layer.bindPopup("<p>Located at " + feature.properties.CITY + ", " feature.properties.STATE + ". </p>");
     },
     pointToLayer: function (feature, latlng){
       var id = 0;
