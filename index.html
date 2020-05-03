@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <style>
         html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
+        .legend {
+            line-height: 16px;
+            width: 140px;
+            color: #333333;
+            padding: 6px 8px;
+            background: white;
+            background: rgba(255,255,255,0.5);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .legend i {
+            width: 16px;
+            height: 16px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.9;
+        }
+
+        .legend img {
+            width: 16px;
+            height: 16px;
+            margin-right: 3px;
+            float: left;
+        }
+
+        .legend p {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+        }
     </style>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
@@ -106,11 +137,11 @@
       // Create Div Element and Populate it with HTML
       var div = L.DomUtil.create('div', 'legend');
       div.innerHTML += '<b>Number of Airports</b><br />';
-      div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p>19+</p>';
-      div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p>14-18</p>';
-      div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p>11-13</p>';
-      div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 6-10</p>';
-      div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0- 5</p>';
+      div.innerHTML += '<i style="background: ' + colors[4] + '; opacity: 0.5"></i><p>45+</p>';
+      div.innerHTML += '<i style="background: ' + colors[3] + '; opacity: 0.5"></i><p>31-45</p>';
+      div.innerHTML += '<i style="background: ' + colors[2] + '; opacity: 0.5"></i><p>21-30</p>';
+      div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p>11-20</p>';
+      div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p>0-10</p>';
       div.innerHTML += '<hr><b>Regions<b><br/>';
       div.innerHTML += '<i class="fa fa-globe marker-color-1"></i><p> Northeast</p>';
       div.innerHTML += '<i class="fa fa-globe marker-color-2"></i><p> Midwest</p>';
