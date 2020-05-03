@@ -60,7 +60,7 @@
                feature.properties.STATE == "VA" || feature.properties.STATE == "AL" || feature.properties.STATE == "KY" ||
                feature.properties.STATE == "MS" || feature.properties.STATE == "TN" || feature.properties.STATE == "AR" ||
                feature.properties.STATE == "LA" || feature.properties.STATE == "OK" || feature.properties.STATE == "TX" ||
-               feature.properties.STATE == "PR") {id = 2;}
+               feature.properties.STATE == "PR" || feature.properties.STATE == "VI") {id = 2;}
       else {id = 3;}
       return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-' + (id +1).toString()})});
     },
