@@ -19,7 +19,7 @@
 <script>
   // 1. Create a map object.
   var mymap = L.map('map', {
-      center: [37.0902, 95.7129],
+      center: [39.0589, -101.3605],
       zoom: 4,
       maxZoom: 10,
       minZoom: 3,
@@ -49,7 +49,8 @@
       var id = 0;
       if (feature.properties.STATE == "CT" || feature.properties.STATE == "ME" || feature.properties.STATE == "MA" ||
           feature.properties.STATE == "NH" || feature.properties.STATE == "RI" || feature.properties.STATE == "VT" ||
-          feature.properties.STATE == "NJ" || feature.properties.STATE == "NY" || feature.properties.STATE == "PA") {id = 0}
+          feature.properties.STATE == "NJ" || feature.properties.STATE == "NY" || feature.properties.STATE == "PA" ||
+          feature.properties.STATE == "WV") {id = 0}
       else if (feature.properties.STATE == "IL" || feature.properties.STATE == "IN" || feature.properties.STATE == "MI" ||
                feature.properties.STATE == "OH" || feature.properties.STATE == "WI" || feature.properties.STATE == "IA" ||
                feature.properties.STATE == "KS" || feature.properties.STATE == "MN" || feature.properties.STATE == "MO" ||
@@ -58,7 +59,8 @@
                feature.properties.STATE == "MD" || feature.properties.STATE == "NC" || feature.properties.STATE == "SC" ||
                feature.properties.STATE == "VA" || feature.properties.STATE == "AL" || feature.properties.STATE == "KY" ||
                feature.properties.STATE == "MS" || feature.properties.STATE == "TN" || feature.properties.STATE == "AR" ||
-               feature.properties.STATE == "LA" || feature.properties.STATE == "OK" || feature.properties.STATE == "TX") {id = 2;}
+               feature.properties.STATE == "LA" || feature.properties.STATE == "OK" || feature.properties.STATE == "TX" ||
+               feature.properties.STATE == "PR") {id = 2;}
       else {id = 3;}
       return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-' + (id +1).toString()})});
     },
