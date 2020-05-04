@@ -102,6 +102,17 @@
     attribution:'Airports in the United States &copy; US Open Data | Boundaries of US States &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Stella Joo'
   }).addTo(mymap);
 
+  var ctrl_twr = null;
+  ctrl_twr = L.geoJson.ajax('assets/airports.geojson', {
+  onEachFeature: function (feature, layer){
+    layer.bindPopup ("This is a Control Tower!");
+  }, pointToLayer: function (feature, latlng){
+    if (feature.properties.CNTL_TWR=="Y"){
+      return L.marker(latlng, {icon: L.divIcon({className: "fa fa-bullseye"})});
+    }
+  }
+}).addTo(mymap);
+
   // 6. Set function for color ramp
   colors = chroma.scale('Purples').colors(5); //colors = chroma.scale('OrRd').colors(5);
 
