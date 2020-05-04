@@ -106,7 +106,7 @@
   ctrl_twr=L.geoJson.ajax("assets/airports.geojson", {
     pointToLayer: function (feature, latlng){
       if (feature.properties.CNTL_TWR == "Y"){
-        return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-bullseye', markerColor: "	#ff0000"})});
+        return L.marker (latlng, {icon: L.icon.fontAwesome({iconClasses: 'fa fa-bullseye', markerColor: "	#ff0000"})});
       }
     }
   }).addTo(mymap);
