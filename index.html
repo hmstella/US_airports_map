@@ -44,7 +44,6 @@
         }
     </style>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
@@ -104,11 +103,10 @@
     attribution:'Airports in the United States &copy; US Open Data | Boundaries of US States &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Stella Joo'
   }).addTo(mymap);
 
-  var icon = <ion-icon name="man-outline"></ion-icon>
   ctrl_twr=L.geoJson.ajax("assets/airports.geojson", {
     pointToLayer: function (feature, latlng){
       if (feature.properties.CNTL_TWR == "Y"){
-        return L.marker (latlng, {icon: icon)})});
+        return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-bullseye marker-color-red'}))})});
       }
     }
   }).addTo(mymap);
