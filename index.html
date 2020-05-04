@@ -66,7 +66,6 @@
   // 3. Add airports GeoJSON Data
   // Null variable that will hold cell tower data
   var airports = null;
-  var ctrl_twr = null;
 
   // // 4. build up a set of colors from colorbrewer's Paired category
   var colors = chroma.scale('Paired').mode('lch').colors(4);
@@ -101,14 +100,6 @@
       return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-' + (id +1).toString()})});
     },
     attribution:'Airports in the United States &copy; US Open Data | Boundaries of US States &copy; Mike Bostock of D3 | Base Map &copy; CartoDB | Made By Stella Joo'
-  }).addTo(mymap);
-
-  ctrl_twr=L.geoJson.ajax("assets/airports.geojson", {
-    pointToLayer: function (feature, latlng){
-      if (feature.properties.CNTL_TWR == "Y"){
-        return L.marker (latlng, {icon: L.divIcon({className: 'fa fa-bullseye'}))})});
-      }
-    }
   }).addTo(mymap);
 
   // 6. Set function for color ramp
